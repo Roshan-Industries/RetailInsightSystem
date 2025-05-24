@@ -2,9 +2,16 @@
 
 class ChatbotAgent:
     def __init__(self):
-        # Initialize any components or models here
+        # In the future, connect to an AI model or local LLM here
         pass
 
     def chat(self, query):
-        # This is a placeholder. Replace with actual chatbot logic if needed.
-        return f"🤖 You asked: '{query}' — (Chatbot response logic to be implemented)"
+        # Basic demo logic
+        if "sales" in query.lower():
+            return "Sales performance depends on pricing, customer demand, seasonal trends, and competitor activity."
+        elif "inventory" in query.lower():
+            return "Inventory optimization requires monitoring stock levels, turnover rates, and supplier reliability."
+        elif "profit" in query.lower():
+            return "Profitability in retail is influenced by margins, operational costs, and customer retention."
+        else:
+            return "I'm still learning. Please ask about sales, inventory, or profit for more insight."

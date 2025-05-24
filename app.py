@@ -52,11 +52,11 @@ if selected_tab == "📊 Data Dashboard":
 # === TAB 2: CHATBOT ===
 chatbot_agent = ChatbotAgent()
 
-st.subheader("🧠 Retail Insight System")
-st.subheader("🤖 Ask the Assistant")
+st.markdown("## 🧠 Retail Insight System")
+st.markdown("### 🤖 Ask the Assistant")
 
 user_query = st.text_input("Type your question here...")
 
 if user_query:
     response = chatbot_agent.chat(user_query)
-    st.write(response)
+    st.success(response)
