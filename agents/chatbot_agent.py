@@ -1,20 +1,10 @@
-import subprocess
+# agents/chatbot_agent.py
 
 class ChatbotAgent:
-    def __init__(self, model="llama3"):
-        self.model = model
+    def __init__(self):
+        # Initialize any components or models here
+        pass
 
-    def ask(self, query):
-        try:
-            result = subprocess.run(
-                ["ollama", "run", self.model],
-                input=query.encode(),
-                capture_output=True,
-                timeout=60
-            )
-            response = result.stdout.decode().strip()
-            return response or "No response from model."
-        except subprocess.TimeoutExpired:
-            return "Model took too long to respond."
-        except Exception as e:
-            return f"Error: {str(e)}"
+    def chat(self, query):
+        # This is a placeholder. Replace with actual chatbot logic if needed.
+        return f"🤖 You asked: '{query}' — (Chatbot response logic to be implemented)"

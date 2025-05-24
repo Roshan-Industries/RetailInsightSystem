@@ -50,19 +50,13 @@ if selected_tab == "📊 Data Dashboard":
         st.image(image_path, caption="Sales Word Chart")
 
 # === TAB 2: CHATBOT ===
-elif selected_tab == "🤖 Chatbot Assistant":
-    st.subheader("🤖 Ask the Assistant")
-    user_input = st.text_input("Type your question here...")
+chatbot_agent = ChatbotAgent()
 
-    if user_input:
-        try:
-            gpt_agent = GPTAgent()
-            chatbot = ChatbotAgent(gpt_agent)
-            response = chatbot.chat(user_input)
+st.subheader("🧠 Retail Insight System")
+st.subheader("🤖 Ask the Assistant")
 
-            if response:
-                st.success(f"🧠 Assistant: {response}")
-            else:
-                st.warning("⚠️ No response from model.")
-        except Exception as e:
-            st.error(f"❌ Error: {str(e)}")
+user_query = st.text_input("Type your question here...")
+
+if user_query:
+    response = chatbot_agent.chat(user_query)
+    st.write(response)
