@@ -1,0 +1,11 @@
+Retail Insight Report
+=====================
+
+Total Word Count: 10
+Unique Words: 10
+Total Sales: $0.00
+
+Sales by Region:
+No sales by region data available.
+
+Chart included: output\word_chart.png

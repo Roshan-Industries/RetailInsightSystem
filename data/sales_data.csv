@@ -1,0 +1,11 @@
+region,sales
+East,1000
+West,1500
+North,2000
+South,2500
+
+| date       | region | product   | sales |
+| ---------- | ------ | --------- | ----- |
+| 2025-01-01 | East   | Product A | 1000  |
+| 2025-01-02 | West   | Product B | 1500  |
+| ...        | ...    | ...       | ...   |
